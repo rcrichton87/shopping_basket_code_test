@@ -16,4 +16,9 @@ public class ItemTest{
     assertEquals("Skimmed Milk", milk1.getName());
   }
 
+  @Test
+  public void testItemHasPrice(){
+    assertEquals(200, milk1.getPrice());
+  }
+
 }
