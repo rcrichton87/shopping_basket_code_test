@@ -9,6 +9,7 @@ public class TillTest{
   Milk milk1;
   Milk milk2;
   Milk milk3;
+  Milk milk4;
   Apples apples1;
   Apples apples2;
   Apples apples3;
@@ -23,6 +24,7 @@ public class TillTest{
     milk1 = new Milk();
     milk2 = new Milk();
     milk3 = new Milk();
+    milk4 = new Milk();
     apples1 = new Apples();
     apples2 = new Apples();
     apples3 = new Apples();
@@ -62,6 +64,15 @@ public class TillTest{
     shoppingBasket.addItem(milk1);
     shoppingBasket.addItem(milk2);
     shoppingBasket.addItem(milk3);
+    assertEquals(400, till.applyBOGOFDiscount(shoppingBasket));
+  }
+
+  @Test
+  public void testBOGOFDiscountFourBOGOFItems(){
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(milk2);
+    shoppingBasket.addItem(milk3);
+    shoppingBasket.addItem(milk4);
     assertEquals(400, till.applyBOGOFDiscount(shoppingBasket));
   }
 
