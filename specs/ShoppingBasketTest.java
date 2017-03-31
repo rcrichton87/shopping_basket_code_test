@@ -56,17 +56,6 @@ public class ShoppingBasketTest{
   }
 
   @Test
-  public void testContentsValueStartsZero(){
-    assertEquals(0, shoppingBasket.getContentsValue());
-  }
-
-  @Test
-  public void testAddingItemIncreasesContentsValue(){
-    shoppingBasket.addItem(milk1);
-    assertEquals(200, shoppingBasket.getContentsValue());
-  }
-
-  @Test
   public void testCanRemoveItemFromBasket(){
     ArrayList<Item> expected = new ArrayList<Item>();
     expected.add(birthdayCake1);
@@ -77,28 +66,12 @@ public class ShoppingBasketTest{
   }
 
   @Test
-  public void testRemovingItemReducesContentsValue(){
-    shoppingBasket.addItem(apples1);
-    shoppingBasket.removeItem(apples1);
-    assertEquals(0, shoppingBasket.getContentsValue());
-  }
-
-  @Test
   public void testCanEmptyBasket(){
     shoppingBasket.addItem(milk1);
     shoppingBasket.addItem(apples1);
     shoppingBasket.addItem(birthdayCake1);
     shoppingBasket.emptyBasket();
     assertEquals(0, shoppingBasket.getContents().size());
-  }
-
-  @Test
-  public void testEmptyingBasketSetsContentsValueToZero(){
-    shoppingBasket.addItem(milk1);
-    shoppingBasket.addItem(apples1);
-    shoppingBasket.addItem(birthdayCake1);
-    shoppingBasket.emptyBasket();
-    assertEquals(0, shoppingBasket.getContentsValue());
   }
 
 }

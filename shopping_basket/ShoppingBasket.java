@@ -9,30 +9,22 @@ public class ShoppingBasket{
 
   public ShoppingBasket(){
     this.contents = new ArrayList<Item>();
-    this.contentsValue = 0;
   }
 
   public ArrayList<Item> getContents(){
     return this.contents;
   }
 
-  public int getContentsValue(){
-    return this.contentsValue;
-  }
-
   public void addItem(Item item){
     this.contents.add(item);
-    this.contentsValue += item.getPrice();
   }
 
   public void removeItem(Item item){
     this.contents.remove(item);
-    this.contentsValue -= item.getPrice();
   }
 
   public void emptyBasket(){
     this.contents.clear();
-    this.contentsValue = 0;
   }
 
 
