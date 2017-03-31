@@ -4,21 +4,26 @@ import shopping_basket.*;
 
 public class ItemTest{
 
-  Milk milk1;
+  Milk milk;
 
   @Before
   public void before(){
-    milk1 = new Milk();
+    milk = new Milk();
   }
 
   @Test
   public void testItemHasName(){
-    assertEquals("Skimmed Milk", milk1.getName());
+    assertEquals("Skimmed Milk", milk.getName());
   }
 
   @Test
   public void testItemHasPrice(){
-    assertEquals(200, milk1.getPrice());
+    assertEquals(200, milk.getPrice());
+  }
+
+  @Test
+  public void testItemHasBOGOF(){
+    assertEquals(true, milk.isBOGOF());
   }
 
 }

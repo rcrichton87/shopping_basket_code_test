@@ -4,6 +4,6 @@ public interface Item{
 
   String getName();
   int getPrice();
-  //boolean isBOGOF();
+  boolean isBOGOF();
 
 }

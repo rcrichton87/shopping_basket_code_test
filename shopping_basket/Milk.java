@@ -20,4 +20,8 @@ public class Milk implements Item {
     return this.price;
   }
 
+  public boolean isBOGOF(){
+    return this.bogof;
+  }
+
 }
