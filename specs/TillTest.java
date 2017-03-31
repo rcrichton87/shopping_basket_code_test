@@ -99,4 +99,9 @@ public class TillTest{
     assertEquals(2700, till.apply10PercentDiscount(3000));
   }
 
+  @Test
+  public void test10PercentDiscountRouning(){
+    assertEquals(2704, till.apply10PercentDiscount(3005));
+  }
+
 }
