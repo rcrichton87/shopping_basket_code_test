@@ -30,5 +30,9 @@ public class ShoppingBasket{
     this.contentsValue -= item.getPrice();
   }
 
+  public void emptyBasket(){
+    this.contents.clear();
+  }
+
 
 }
