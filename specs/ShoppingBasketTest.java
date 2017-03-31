@@ -92,4 +92,13 @@ public class ShoppingBasketTest{
     assertEquals(0, shoppingBasket.getContents().size());
   }
 
+  @Test
+  public void testEmptyingBasketSetsContentsValueToZero(){
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(apples1);
+    shoppingBasket.addItem(birthdayCake1);
+    shoppingBasket.emptyBasket();
+    assertEquals(0, shoppingBasket.getContentsValue());
+  }
+
 }

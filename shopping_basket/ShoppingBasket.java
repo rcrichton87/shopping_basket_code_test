@@ -32,6 +32,7 @@ public class ShoppingBasket{
 
   public void emptyBasket(){
     this.contents.clear();
+    this.contentsValue = 0;
   }
 
 
