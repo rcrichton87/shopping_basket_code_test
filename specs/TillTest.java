@@ -114,4 +114,9 @@ public class TillTest{
     assertEquals(98, till.applyLoyaltyDiscount(100, true));
   }
 
+  @Test
+  public void testLoyaltyDiscountNotApplied(){
+    assertEquals(100, till.applyLoyaltyDiscount(100, false));
+  }
+
 }
