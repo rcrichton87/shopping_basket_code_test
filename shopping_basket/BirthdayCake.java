@@ -6,7 +6,7 @@ public class BirthdayCake implements Item{
   int price;
   boolean bogof;
 
-  public Apples(){
+  public BirthdayCake(){
     this.name = "Birthday Cake";
     this.price = 1000;
     this.bogof = false;
