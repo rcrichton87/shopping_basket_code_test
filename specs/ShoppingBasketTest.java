@@ -66,4 +66,14 @@ public class ShoppingBasketTest{
     assertEquals(200, shoppingBasket.getContentsValue());
   }
 
+  @Test
+  public void testCanRemoveItemFromBasket(){
+    ArrayList<Item> expected = new ArrayList<Item>();
+    expected.add(birthdayCake1);
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(birthdayCake1);
+    shoppingBasket.removeItem(milk1);
+    assertEquals(expected, shoppingBasket.getContents());
+  }
+
 }
