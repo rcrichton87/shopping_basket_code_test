@@ -119,4 +119,20 @@ public class TillTest{
     assertEquals(100, till.applyLoyaltyDiscount(100, false));
   }
 
+  @Test
+  public void testApplyAllDiscountsNoneApply(){
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(apples1);
+    shoppingBasket.addItem(apples2);
+    assertEquals(800, till.applyAllDiscounts(shoppingBasket, false));
+  }
+
+  @Test
+  public void testApplyAllDiscountsBOGOF(){
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(milk2);
+    shoppingBasket.addItem(apples1);
+    assertEquals(500, till.applyAllDiscounts(shoppingBasket, false));
+  }
+
 }

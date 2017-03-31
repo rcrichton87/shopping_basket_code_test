@@ -71,4 +71,11 @@ public class Till{
     return totalPrice;
   }
 
+  public int applyAllDiscounts(ShoppingBasket shoppingBasket, boolean hasLoyaltyCard){
+    int priceAfterBOGOF = this.applyBOGOFDiscount(shoppingBasket);
+    int priceAfter10Percent = this.apply10PercentDiscount(priceAfterBOGOF);
+    int priceAfterLoyalty = this.applyLoyaltyDiscount(priceAfter10Percent, hasLoyaltyCard);
+    return priceAfterLoyalty;
+  }
+
 }
