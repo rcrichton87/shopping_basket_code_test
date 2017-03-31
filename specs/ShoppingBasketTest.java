@@ -13,7 +13,7 @@ public class ShoppingBasketTest{
 
   @Test
   public void testShoppingBasketStartsEmpty(){
-    assertEquals(0, shoppingBasket.getContents().length());
+    assertEquals(0, shoppingBasket.getContents().size());
   }
 
 }
