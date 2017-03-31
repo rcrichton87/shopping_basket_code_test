@@ -157,4 +157,14 @@ public class TillTest{
     assertEquals(2000, till.applyAllDiscounts(shoppingBasket, false));
   }
 
+  @Test
+  public void testApplyAllDiscountsAllApply(){
+    shoppingBasket.addItem(dogFood1);
+    shoppingBasket.addItem(dogFood2);
+    shoppingBasket.addItem(dogFood3);
+    shoppingBasket.addItem(apples1);
+    shoppingBasket.addItem(apples2);
+    assertEquals(3175, till.applyAllDiscounts(shoppingBasket, true));
+  }
+
 }
