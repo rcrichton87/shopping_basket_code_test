@@ -16,6 +16,10 @@ public class TillTest{
   BirthdayCake birthdayCake1;
   BirthdayCake birthdayCake2;
   BirthdayCake birthdayCake3;
+  DogFood dogFood1;
+  DogFood dogFood2;
+  DogFood dogFood3;
+
 
   @Before 
   public void before(){
@@ -31,6 +35,9 @@ public class TillTest{
     birthdayCake1 = new BirthdayCake();
     birthdayCake2 = new BirthdayCake();
     birthdayCake3 = new BirthdayCake();
+    dogFood1 = new DogFood();
+    dogFood2 = new DogFood();
+    dogFood3 = new DogFood();
   }
 
   @Test
@@ -74,6 +81,17 @@ public class TillTest{
     shoppingBasket.addItem(milk3);
     shoppingBasket.addItem(milk4);
     assertEquals(400, till.applyBOGOFDiscount(shoppingBasket));
+  }
+
+  @Test
+  public void testBOGOFDiscountMultipleBOGOFClasses(){
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(milk2);
+    shoppingBasket.addItem(milk3);
+    shoppingBasket.addItem(dogFood1);
+    shoppingBasket.addItem(dogFood2);
+    shoppingBasket.addItem(dogFood3);
+    assertEquals(3400, till.applyBOGOFDiscount(shoppingBasket));
   }
 
 }
