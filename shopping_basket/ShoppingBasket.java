@@ -16,5 +16,9 @@ public class ShoppingBasket{
     return this.contents;
   }
 
+  public void addItem(Item item){
+    this.contents.add(item);
+  }
+
 
 }
