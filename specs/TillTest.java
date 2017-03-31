@@ -94,4 +94,9 @@ public class TillTest{
     assertEquals(3400, till.applyBOGOFDiscount(shoppingBasket));
   }
 
+  @Test
+  public void test10PercentDiscountApplied(){
+    assertEquals(2700, till.apply10PercentDiscount(3000));
+  }
+
 }

@@ -53,4 +53,13 @@ public class Till{
 
   }
 
+  public int apply10PercentDiscount(int totalPrice){
+    if (totalPrice > 2000){
+      double discount = totalPrice * 0.10;
+      int roundedDiscount = ((int) Math.ceil(discount));
+      totalPrice -= roundedDiscount;
+    }
+    return totalPrice;
+  }
+
 }
