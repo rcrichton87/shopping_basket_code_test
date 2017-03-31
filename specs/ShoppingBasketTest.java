@@ -60,4 +60,10 @@ public class ShoppingBasketTest{
     assertEquals(0, shoppingBasket.getContentsValue());
   }
 
+  @Test
+  public void testAddingItemIncreasesContentsValue(){
+    shoppingBasket.addItem(milk1);
+    assertEquals(200, shoppingBasket.getContentsValue());
+  }
+
 }
