@@ -62,4 +62,13 @@ public class Till{
     return totalPrice;
   }
 
+  public int applyLoyaltyDiscount(int totalPrice, boolean hasLoyaltyCard){
+    if (hasLoyaltyCard == true){
+      double discount = totalPrice * 0.02;
+      int roundedDiscount = ((int) Math.ceil(discount));
+      totalPrice -= roundedDiscount;
+    }
+    return totalPrice;
+  }
+
 }
