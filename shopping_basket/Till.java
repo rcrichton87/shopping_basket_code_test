@@ -20,7 +20,7 @@ public class Till{
     int totalPrice = this.getItemsTotalPrice(shoppingBasket);
 
     ArrayList<Item> basketContents = shoppingBasket.getContents();
-    Set<Class> itemClasses = new HashSet<Class>();
+    Set<Class> itemClasses = new HashSet<Class>(); //sets don't contain duplicate values
 
     for (Item item : basketContents) {
       if (item.isBOGOF() == true ) {

@@ -48,4 +48,13 @@ public class TillTest{
     assertEquals(500, till.applyBOGOFDiscount(shoppingBasket));
   }
 
+  @Test
+  public void testBOGOFDiscountNotApplied(){
+    shoppingBasket.addItem(milk1);
+    shoppingBasket.addItem(apples1);
+    shoppingBasket.addItem(apples2);
+    shoppingBasket.addItem(birthdayCake1);
+    assertEquals(1800, till.applyBOGOFDiscount(shoppingBasket));
+  }
+
 }
