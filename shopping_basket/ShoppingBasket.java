@@ -16,6 +16,10 @@ public class ShoppingBasket{
     return this.contents;
   }
 
+  public int getContentsValue(){
+    return this.contentsValue;
+  }
+
   public void addItem(Item item){
     this.contents.add(item);
   }

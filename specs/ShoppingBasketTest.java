@@ -55,4 +55,9 @@ public class ShoppingBasketTest{
     assertEquals(expected, shoppingBasket.getContents());
   }
 
+  @Test
+  public void testContentsValueStartsZero(){
+    assertEquals(0, shoppingBasket.getContentsValue());
+  }
+
 }
