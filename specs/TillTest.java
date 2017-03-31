@@ -142,4 +142,10 @@ public class TillTest{
     assertEquals(2250, till.applyAllDiscounts(shoppingBasket, false));
   }
 
+  @Test
+  public void testApplyAllDiscountsLoyalty(){
+    shoppingBasket.addItem(birthdayCake1);
+    assertEquals(980, till.applyAllDiscounts(shoppingBasket, true));
+  }
+
 }
