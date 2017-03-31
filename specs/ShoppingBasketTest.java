@@ -45,4 +45,14 @@ public class ShoppingBasketTest{
     assertEquals(expected, shoppingBasket.getContents());
   }
 
+  @Test
+  public void testCanAddMultipleTypesToBasket(){
+    ArrayList<Item> expected = new ArrayList<Item>();
+    expected.add(apples1);
+    expected.add(birthdayCake1);
+    shoppingBasket.addItem(apples1);
+    shoppingBasket.addItem(birthdayCake1);
+    assertEquals(expected, shoppingBasket.getContents());
+  }
+
 }
