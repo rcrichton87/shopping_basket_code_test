@@ -27,6 +27,7 @@ public class ShoppingBasket{
 
   public void removeItem(Item item){
     this.contents.remove(item);
+    this.contentsValue -= item.getPrice();
   }
 
 

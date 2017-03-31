@@ -76,4 +76,11 @@ public class ShoppingBasketTest{
     assertEquals(expected, shoppingBasket.getContents());
   }
 
+  @Test
+  public void testRemovingItemReducesContentsValue(){
+    shoppingBasket.addItem(apples1);
+    shoppingBasket.removeItem(apples1);
+    assertEquals(0, shoppingBasket.getContentsValue());
+  }
+
 }
