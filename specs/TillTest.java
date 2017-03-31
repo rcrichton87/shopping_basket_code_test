@@ -148,4 +148,13 @@ public class TillTest{
     assertEquals(980, till.applyAllDiscounts(shoppingBasket, true));
   }
 
+  @Test
+  public void testApplyAllDiscountsBOGOFTakesValueBelow2000(){
+    shoppingBasket.addItem(dogFood1); //1500
+    shoppingBasket.addItem(apples1); //1800
+    shoppingBasket.addItem(milk1); //2000
+    shoppingBasket.addItem(milk2); //2200 (2000 after BOGOF)
+    assertEquals(2000, till.applyAllDiscounts(shoppingBasket, false));
+  }
+
 }
